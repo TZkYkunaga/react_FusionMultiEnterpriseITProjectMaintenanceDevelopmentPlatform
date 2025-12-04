@@ -14,6 +14,21 @@
       },
       "filename": "frontend/src/app/dashboard/actions.ts",
       "exportedName": "generateRoadmapAction"
+    },
+    "408fc6e9c6874ab13c9d1fbde8d7b5db4474cba145": {
+      "workers": {
+        "app/dashboard/feedback/page": {
+          "moduleId": "[project]/frontend/.next-internal/server/app/dashboard/feedback/page/actions.js { ACTIONS_MODULE0 => \"[project]/frontend/src/ai/flows/summarize-feedback.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "summarizeFeedback",
+          "filename": "frontend/src/ai/flows/summarize-feedback.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/feedback/page": "action-browser"
+      },
+      "filename": "frontend/src/ai/flows/summarize-feedback.ts",
+      "exportedName": "summarizeFeedback"
     }
   },
   "edge": {},
