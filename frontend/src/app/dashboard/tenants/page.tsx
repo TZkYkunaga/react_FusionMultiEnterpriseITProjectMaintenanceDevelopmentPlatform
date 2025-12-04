@@ -26,8 +26,16 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
-const tenants = [
+type Tenant = {
+  name: string;
+  plan: 'Enterprise' | 'Business' | 'Trial';
+  status: 'Active' | 'Inactive' | 'Trial';
+  users: number;
+};
+
+const initialTenants: Tenant[] = [
   { name: 'Acme Corporation', plan: 'Enterprise', status: 'Active', users: 125 },
   { name: 'Stark Industries', plan: 'Enterprise', status: 'Active', users: 250 },
   { name: 'Wayne Enterprises', plan: 'Business', status: 'Trial', users: 50 },
@@ -36,20 +44,28 @@ const tenants = [
 
 const formSchema = z.object({
   tenantName: z.string().min(3, "Tenant name must be at least 3 characters."),
+  plan: z.enum(['Enterprise', 'Business', 'Trial']),
 });
 
 export default function TenantsPage() {
   const [isDialogOpen, setDialogOpen] = useState(false);
+  const [tenants, setTenants] = useState<Tenant[]>(initialTenants);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       tenantName: "",
+      plan: "Business",
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    // Here you would typically handle form submission, e.g., call an API
+    const newTenant: Tenant = {
+        name: values.tenantName,
+        plan: values.plan as 'Enterprise' | 'Business' | 'Trial',
+        status: 'Active',
+        users: 1
+    };
+    setTenants(prev => [...prev, newTenant]);
     setDialogOpen(false);
     form.reset();
   }
@@ -121,6 +137,28 @@ export default function TenantsPage() {
                   </FormItem>
                 )}
               />
+              <FormField
+                control={form.control}
+                name="plan"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Plan</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                            <SelectTrigger>
+                                <SelectValue placeholder="Select a plan" />
+                            </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                            <SelectItem value="Business">Business</SelectItem>
+                            <SelectItem value="Enterprise">Enterprise</SelectItem>
+                            <SelectItem value="Trial">Trial</SelectItem>
+                        </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+                />
               <Button type="submit">Create Tenant</Button>
             </form>
           </Form>
