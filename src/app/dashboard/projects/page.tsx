@@ -59,7 +59,7 @@ export default function ProjectsPage() {
   }
 
   return (
-    <>
+    <div className="flex flex-col flex-1 gap-4 md:gap-8">
       <div className="flex items-center gap-4">
         <h1 className="font-semibold text-lg md:text-2xl">Projects</h1>
         <Button className="ml-auto gap-1" onClick={() => setDialogOpen(true)}>
@@ -67,7 +67,7 @@ export default function ProjectsPage() {
           New Project
         </Button>
       </div>
-      <Card>
+      <Card className="flex-1">
         <CardHeader>
           <CardTitle>All Projects</CardTitle>
           <CardDescription>
@@ -143,6 +143,6 @@ export default function ProjectsPage() {
           </Form>
         </DialogContent>
       </Dialog>
-    </>
+    </div>
   );
 }

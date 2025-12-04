@@ -54,7 +54,7 @@ export default function FeedbackPage() {
   }
 
   return (
-    <div className="grid gap-4 md:gap-8 lg:grid-cols-2">
+    <div className="grid gap-4 md:gap-8 lg:grid-cols-2 flex-1">
       <Card>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>

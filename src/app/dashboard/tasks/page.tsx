@@ -60,7 +60,7 @@ export default function TasksPage() {
   }
 
   return (
-    <>
+    <div className="flex flex-col flex-1 gap-4 md:gap-8">
       <div className="flex items-center gap-4">
         <h1 className="font-semibold text-lg md:text-2xl">Tasks</h1>
         <Button className="ml-auto gap-1" onClick={() => setDialogOpen(true)}>
@@ -146,6 +146,6 @@ export default function TasksPage() {
           </Form>
         </DialogContent>
       </Dialog>
-    </>
+    </div>
   );
 }
