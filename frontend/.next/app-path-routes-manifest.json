@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/signup/page": "/signup",
+  "/page": "/",
+  "/login/page": "/login",
+  "/dashboard/admins/page": "/dashboard/admins",
+  "/dashboard/collaboration/page": "/dashboard/collaboration",
+  "/dashboard/account/billing/page": "/dashboard/account/billing",
+  "/dashboard/feedback/page": "/dashboard/feedback",
+  "/dashboard/tasks/page": "/dashboard/tasks",
+  "/dashboard/account/profile/page": "/dashboard/account/profile",
+  "/dashboard/projects/page": "/dashboard/projects",
+  "/dashboard/settings/page": "/dashboard/settings",
+  "/dashboard/page": "/dashboard",
+  "/dashboard/users/page": "/dashboard/users",
+  "/dashboard/tenants/page": "/dashboard/tenants"
+}

@@ -482,36 +482,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$component
 ;
 ;
 ;
-const activities = [
-    {
-        user: 'Alice',
-        avatarSeed: 2,
-        action: 'commented on task',
-        target: '#T-1234',
-        time: '5m ago'
-    },
-    {
-        user: 'Bob',
-        avatarSeed: 3,
-        action: 'created a new project',
-        target: 'Project Odyssey',
-        time: '1h ago'
-    },
-    {
-        user: 'Charlie',
-        avatarSeed: 4,
-        action: 'updated status to "In Review"',
-        target: '#T-5678',
-        time: '3h ago'
-    },
-    {
-        user: 'David',
-        avatarSeed: 5,
-        action: 'closed task',
-        target: '#T-9101',
-        time: '8h ago'
-    }
-];
+// TODO: Replace with data fetched from the backend (e.g. /api/activity)
+const activities = [];
 function RecentActivity() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
         children: [
@@ -521,51 +493,55 @@ function RecentActivity() {
                         children: "Recent Activity"
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                        lineNumber: 19,
+                        lineNumber: 15,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardDescription"], {
                         children: "What's been happening across your projects."
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                        lineNumber: 20,
+                        lineNumber: 16,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                lineNumber: 18,
+                lineNumber: 14,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
                 className: "space-y-4",
-                children: activities.map((activity, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: activities.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "text-sm text-muted-foreground",
+                    children: "No recent activity available."
+                }, void 0, false, {
+                    fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+                    lineNumber: 20,
+                    columnNumber: 17
+                }, this) : activities.map((activity, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center gap-3",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Avatar"], {
                                 className: "h-9 w-9",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["AvatarImage"], {
-                                        src: `https://picsum.photos/seed/${activity.avatarSeed}/100/100`,
-                                        alt: "Avatar",
-                                        "data-ai-hint": "person face"
-                                    }, void 0, false, {
-                                        fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                                        lineNumber: 26,
-                                        columnNumber: 17
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["AvatarFallback"], {
-                                        children: activity.user.charAt(0)
-                                    }, void 0, false, {
-                                        fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                                        lineNumber: 27,
-                                        columnNumber: 17
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                children: activity.avatarSeed ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["AvatarImage"], {
+                                    src: `https://picsum.photos/seed/${activity.avatarSeed}/100/100`,
+                                    alt: "Avatar",
+                                    "data-ai-hint": "person face"
+                                }, void 0, false, {
+                                    fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+                                    lineNumber: 26,
+                                    columnNumber: 33
+                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["AvatarFallback"], {
+                                    children: activity.user.charAt(0)
+                                }, void 0, false, {
+                                    fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+                                    lineNumber: 28,
+                                    columnNumber: 33
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                                lineNumber: 25,
-                                columnNumber: 17
+                                lineNumber: 24,
+                                columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "text-sm",
@@ -577,55 +553,55 @@ function RecentActivity() {
                                                 children: activity.user
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                                                lineNumber: 31,
-                                                columnNumber: 21
+                                                lineNumber: 33,
+                                                columnNumber: 33
                                             }, this),
                                             " ",
                                             activity.action,
                                             ' ',
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            activity.target && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "font-medium text-primary",
                                                 children: activity.target
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                                                lineNumber: 32,
-                                                columnNumber: 21
+                                                lineNumber: 34,
+                                                columnNumber: 53
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                                        lineNumber: 30,
-                                        columnNumber: 17
+                                        lineNumber: 32,
+                                        columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-xs text-muted-foreground",
                                         children: activity.time
                                     }, void 0, false, {
                                         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                                        lineNumber: 34,
-                                        columnNumber: 17
+                                        lineNumber: 36,
+                                        columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                                lineNumber: 29,
-                                columnNumber: 17
+                                lineNumber: 31,
+                                columnNumber: 25
                             }, this)
                         ]
                     }, index, true, {
                         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                        lineNumber: 24,
-                        columnNumber: 13
+                        lineNumber: 23,
+                        columnNumber: 21
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-                lineNumber: 22,
+                lineNumber: 18,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
-        lineNumber: 17,
+        lineNumber: 13,
         columnNumber: 9
     }, this);
 }

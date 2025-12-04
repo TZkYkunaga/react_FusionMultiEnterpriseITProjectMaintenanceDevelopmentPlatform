@@ -612,6 +612,10 @@ body {
   margin-bottom: .5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .ml-1 {
   margin-left: .25rem;
 }
@@ -1644,6 +1648,11 @@ body {
 
 .text-primary-foreground {
   color: hsl(var(--primary-foreground));
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgba(220, 38, 38, var(--tw-text-opacity, 1));
 }
 
 .text-secondary-foreground {
