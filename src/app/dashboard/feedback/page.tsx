@@ -8,7 +8,7 @@ import {
 
 export default function FeedbackPage() {
   return (
-    <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
+    <>
       <div className="flex items-center gap-4">
         <h1 className="font-semibold text-lg md:text-2xl">Feedback</h1>
       </div>
@@ -23,6 +23,6 @@ export default function FeedbackPage() {
           <p>Feedback summary and analysis tools will go here.</p>
         </CardContent>
       </Card>
-    </main>
+    </>
   );
 }
