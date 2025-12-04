@@ -482,6 +482,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$component
 ;
 ;
 ;
+<<<<<<< HEAD
+// TODO: Replace with data fetched from the backend (e.g. /api/activity)
+const activities = [];
+=======
 const activities = [
     {
         user: 'Alice',
@@ -512,6 +516,7 @@ const activities = [
         time: '8h ago'
     }
 ];
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
 function RecentActivity() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
         children: [
@@ -521,29 +526,73 @@ function RecentActivity() {
                         children: "Recent Activity"
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+<<<<<<< HEAD
+                        lineNumber: 15,
+=======
                         lineNumber: 19,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardDescription"], {
                         children: "What's been happening across your projects."
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+<<<<<<< HEAD
+                        lineNumber: 16,
+=======
                         lineNumber: 20,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+<<<<<<< HEAD
+                lineNumber: 14,
+=======
                 lineNumber: 18,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
                 className: "space-y-4",
+<<<<<<< HEAD
+                children: activities.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "text-sm text-muted-foreground",
+                    children: "No recent activity available."
+                }, void 0, false, {
+                    fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+                    lineNumber: 20,
+                    columnNumber: 17
+                }, this) : activities.map((activity, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+=======
                 children: activities.map((activity, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                         className: "flex items-center gap-3",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Avatar"], {
                                 className: "h-9 w-9",
+<<<<<<< HEAD
+                                children: activity.avatarSeed ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["AvatarImage"], {
+                                    src: `https://picsum.photos/seed/${activity.avatarSeed}/100/100`,
+                                    alt: "Avatar",
+                                    "data-ai-hint": "person face"
+                                }, void 0, false, {
+                                    fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+                                    lineNumber: 26,
+                                    columnNumber: 33
+                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["AvatarFallback"], {
+                                    children: activity.user.charAt(0)
+                                }, void 0, false, {
+                                    fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+                                    lineNumber: 28,
+                                    columnNumber: 33
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+                                lineNumber: 24,
+                                columnNumber: 25
+=======
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["AvatarImage"], {
                                         src: `https://picsum.photos/seed/${activity.avatarSeed}/100/100`,
@@ -566,6 +615,7 @@ function RecentActivity() {
                                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
                                 lineNumber: 25,
                                 columnNumber: 17
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "text-sm",
@@ -577,55 +627,97 @@ function RecentActivity() {
                                                 children: activity.user
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+<<<<<<< HEAD
+                                                lineNumber: 33,
+                                                columnNumber: 33
+=======
                                                 lineNumber: 31,
                                                 columnNumber: 21
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                             }, this),
                                             " ",
                                             activity.action,
                                             ' ',
+<<<<<<< HEAD
+                                            activity.target && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+=======
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                                 className: "font-medium text-primary",
                                                 children: activity.target
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+<<<<<<< HEAD
+                                                lineNumber: 34,
+                                                columnNumber: 53
+=======
                                                 lineNumber: 32,
                                                 columnNumber: 21
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+<<<<<<< HEAD
+                                        lineNumber: 32,
+                                        columnNumber: 29
+=======
                                         lineNumber: 30,
                                         columnNumber: 17
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-xs text-muted-foreground",
                                         children: activity.time
                                     }, void 0, false, {
                                         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+<<<<<<< HEAD
+                                        lineNumber: 36,
+                                        columnNumber: 29
+=======
                                         lineNumber: 34,
                                         columnNumber: 17
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+<<<<<<< HEAD
+                                lineNumber: 31,
+                                columnNumber: 25
+=======
                                 lineNumber: 29,
                                 columnNumber: 17
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                             }, this)
                         ]
                     }, index, true, {
                         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+<<<<<<< HEAD
+                        lineNumber: 23,
+                        columnNumber: 21
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+                lineNumber: 18,
+=======
                         lineNumber: 24,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
                 lineNumber: 22,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/frontend/src/components/dashboard/recent-activity.tsx",
+<<<<<<< HEAD
+        lineNumber: 13,
+=======
         lineNumber: 17,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
         columnNumber: 9
     }, this);
 }

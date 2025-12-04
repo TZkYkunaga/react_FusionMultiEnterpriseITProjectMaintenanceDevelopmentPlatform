@@ -612,6 +612,13 @@ body {
   margin-bottom: .5rem;
 }
 
+<<<<<<< HEAD
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+=======
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
 .ml-1 {
   margin-left: .25rem;
 }
@@ -1646,6 +1653,14 @@ body {
   color: hsl(var(--primary-foreground));
 }
 
+<<<<<<< HEAD
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgba(220, 38, 38, var(--tw-text-opacity, 1));
+}
+
+=======
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
 }

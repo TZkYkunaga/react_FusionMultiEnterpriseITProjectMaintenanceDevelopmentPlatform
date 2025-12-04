@@ -6,7 +6,11 @@
       "static/chunks/frontend_src_16c0bfa6._.js",
       "static/chunks/frontend_src_app_layout_tsx_0a548d63._.js",
       "static/chunks/node_modules_next_dist_client_components_builtin_global-error_ca5c006e.js",
+<<<<<<< HEAD
+      "static/chunks/_49dd63b7._.js",
+=======
       "static/chunks/_113338c7._.js",
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
       "static/chunks/frontend_src_app_login_page_tsx_ca5c006e._.js",
       "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_57d40746._.js",
       "static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js",

@@ -642,6 +642,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 function UserNav() {
+<<<<<<< HEAD
+    // TODO: Replace with real user data from backend (e.g. /api/me)
+=======
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
     const userAvatar = __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$lib$2f$placeholder$2d$images$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["PlaceHolderImages"].find((p)=>p.id === 'user-avatar');
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DropdownMenu"], {
         children: [
@@ -652,6 +656,26 @@ function UserNav() {
                     className: "relative h-8 w-8 rounded-full",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Avatar"], {
                         className: "h-9 w-9",
+<<<<<<< HEAD
+                        children: userAvatar ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["AvatarImage"], {
+                            src: userAvatar.imageUrl,
+                            alt: "User Avatar",
+                            "data-ai-hint": userAvatar.imageHint
+                        }, void 0, false, {
+                            fileName: "[project]/frontend/src/components/user-nav.tsx",
+                            lineNumber: 26,
+                            columnNumber: 15
+                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["AvatarFallback"], {
+                            children: "U"
+                        }, void 0, false, {
+                            fileName: "[project]/frontend/src/components/user-nav.tsx",
+                            lineNumber: 28,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/frontend/src/components/user-nav.tsx",
+                        lineNumber: 24,
+=======
                         children: [
                             userAvatar && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["AvatarImage"], {
                                 src: userAvatar.imageUrl,
@@ -673,16 +697,25 @@ function UserNav() {
                     }, void 0, true, {
                         fileName: "[project]/frontend/src/components/user-nav.tsx",
                         lineNumber: 23,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                    lineNumber: 23,
+=======
                     lineNumber: 22,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                lineNumber: 22,
+=======
                 lineNumber: 21,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DropdownMenuContent"], {
@@ -697,34 +730,60 @@ function UserNav() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-sm font-medium leading-none",
+<<<<<<< HEAD
+                                    children: "Account"
+                                }, void 0, false, {
+                                    fileName: "[project]/frontend/src/components/user-nav.tsx",
+                                    lineNumber: 36,
+=======
                                     children: "Project Manager"
                                 }, void 0, false, {
                                     fileName: "[project]/frontend/src/components/user-nav.tsx",
                                     lineNumber: 32,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-xs leading-none text-muted-foreground",
+<<<<<<< HEAD
+                                    children: "—"
+                                }, void 0, false, {
+                                    fileName: "[project]/frontend/src/components/user-nav.tsx",
+                                    lineNumber: 37,
+=======
                                     children: "pm@example.com"
                                 }, void 0, false, {
                                     fileName: "[project]/frontend/src/components/user-nav.tsx",
                                     lineNumber: 33,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                            lineNumber: 35,
+=======
                             lineNumber: 31,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                        lineNumber: 34,
+=======
                         lineNumber: 30,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DropdownMenuSeparator"], {}, void 0, false, {
                         fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                        lineNumber: 40,
+=======
                         lineNumber: 38,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DropdownMenuGroup"], {
@@ -736,12 +795,20 @@ function UserNav() {
                                     children: "Profile"
                                 }, void 0, false, {
                                     fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                                    lineNumber: 43,
+=======
                                     lineNumber: 41,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                                lineNumber: 42,
+=======
                                 lineNumber: 40,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -751,12 +818,20 @@ function UserNav() {
                                     children: "Billing"
                                 }, void 0, false, {
                                     fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                                    lineNumber: 46,
+=======
                                     lineNumber: 44,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                                lineNumber: 45,
+=======
                                 lineNumber: 43,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -766,42 +841,70 @@ function UserNav() {
                                     children: "Settings"
                                 }, void 0, false, {
                                     fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                                    lineNumber: 49,
+=======
                                     lineNumber: 47,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                                lineNumber: 48,
+=======
                                 lineNumber: 46,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                        lineNumber: 41,
+=======
                         lineNumber: 39,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DropdownMenuSeparator"], {}, void 0, false, {
                         fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                        lineNumber: 52,
+=======
                         lineNumber: 50,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
                         children: "Log out"
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                        lineNumber: 53,
+=======
                         lineNumber: 51,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+                lineNumber: 33,
+=======
                 lineNumber: 29,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/frontend/src/components/user-nav.tsx",
+<<<<<<< HEAD
+        lineNumber: 21,
+=======
         lineNumber: 20,
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
         columnNumber: 5
     }, this);
 }

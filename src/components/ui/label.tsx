@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+import * as React from "react";
+
+export interface LabelProps
+  extends React.LabelHTMLAttributes<HTMLLabelElement> {}
+
+export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
+  ({ className = "", ...props }, ref) => (
+    <label
+      ref={ref}
+      className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`}
+      {...props}
+    />
+  )
+);
+
+Label.displayName = "Label";
+
+
+=======
 "use client"
 
 import * as React from "react"
@@ -24,3 +44,4 @@ const Label = React.forwardRef<
 Label.displayName = LabelPrimitive.Root.displayName
 
 export { Label }
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)

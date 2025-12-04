@@ -1,5 +1,19 @@
 {
+<<<<<<< HEAD
+  "/dashboard/account/profile/page": "app/dashboard/account/profile/page.js",
+  "/dashboard/collaboration/page": "app/dashboard/collaboration/page.js",
+  "/dashboard/feedback/page": "app/dashboard/feedback/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/dashboard/projects/page": "app/dashboard/projects/page.js",
+  "/dashboard/settings/page": "app/dashboard/settings/page.js",
+  "/dashboard/tasks/page": "app/dashboard/tasks/page.js",
+  "/dashboard/tenants/page": "app/dashboard/tenants/page.js",
+  "/dashboard/users/page": "app/dashboard/users/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js"
+=======
   "/login/page": "app/login/page.js",
   "/page": "app/page.js",
   "/signup/page": "app/signup/page.js"
+>>>>>>> parent of ea8d1d3 (Set up docker, admin api)
 }
