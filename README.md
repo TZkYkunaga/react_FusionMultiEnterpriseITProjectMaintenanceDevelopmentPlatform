@@ -1,5 +1,3 @@
-Dựa trên yêu cầu, ta có thể chia hệ thống thành 13 microservice chính (có thể mở rộng thêm). Mỗi service độc lập, có database riêng, và giao tiếp qua API Gateway hoặc Message Queue (Kafka/RabbitMQ).
-
 ⚙️ 1. Identity & Access Management Service (IAM)
 
 Domain: Xác thực, phân quyền đa tenant.
