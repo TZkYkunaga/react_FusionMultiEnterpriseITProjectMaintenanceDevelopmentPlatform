@@ -1,0 +1,21 @@
+{
+  "node": {
+    "40aa3ffd212894eb493a2fe1e597ff8f9584606c07": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "[project]/frontend/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/frontend/src/app/dashboard/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "generateRoadmapAction",
+          "filename": "frontend/src/app/dashboard/actions.ts"
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "action-browser"
+      },
+      "filename": "frontend/src/app/dashboard/actions.ts",
+      "exportedName": "generateRoadmapAction"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "d244x9q3BPGrZPWidXs/BQ8XA09gbUen/Ss6NWUe/pE="
+}
