@@ -68,12 +68,12 @@ export default function TasksPage() {
           New Task
         </Button>
       </div>
-      <Card className="flex-1">
+      <Card className="flex-1 flex flex-col">
         <CardHeader>
           <CardTitle>All Tasks</CardTitle>
           <CardDescription>A list of all tasks assigned to you or your team.</CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="flex-1">
           <Table>
             <TableHeader>
               <TableRow>
