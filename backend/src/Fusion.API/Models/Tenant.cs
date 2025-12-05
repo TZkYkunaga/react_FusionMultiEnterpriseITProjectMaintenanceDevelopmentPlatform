@@ -1,3 +1,4 @@
+using System; // Added for DateTime
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,15 +12,15 @@ namespace Fusion.API.Models
 
         [Required]
         [StringLength(255)]
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string Domain { get; set; }
+        public required string Domain { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Status { get; set; } = "Active";
+        public required string Status { get; set; } = "Active";
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 

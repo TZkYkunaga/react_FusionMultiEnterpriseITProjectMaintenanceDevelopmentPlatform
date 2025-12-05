@@ -1,4 +1,4 @@
-// File: C:\Users\Admin\Desktop\DownloadUltraPlus\React app\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\frontend\src\app\dashboard\projects\page.tsx
+// File: C:\Users\Admin\Desktop\DownloadUltraPlus\React_app\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\frontend\src\app\dashboard\projects\page.tsx
 import * as entry from '../../../../../src/app/dashboard/projects/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

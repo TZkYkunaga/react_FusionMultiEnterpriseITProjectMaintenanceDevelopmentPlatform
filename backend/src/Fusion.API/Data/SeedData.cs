@@ -28,10 +28,11 @@ namespace Fusion.API.Data
                 {
                     context.Admins.Add(new Admin
                     {
-                        // Store the email as the admin username for login purposes.
-                        Username = initialEmail,
-                        // IMPORTANT: This is a placeholder. In a real application,
-                        // you MUST hash the password using a secure algorithm like BCrypt.
+                        // Store the initial admin email and name.
+                        Email = initialEmail,
+                        Name = initialEmail.Split('@').First(),
+                        // WARNING: Storing plain text password for temporary development.
+                        // In a real application, you MUST hash the password.
                         PasswordHash = initialPassword
                     });
                     context.SaveChanges();

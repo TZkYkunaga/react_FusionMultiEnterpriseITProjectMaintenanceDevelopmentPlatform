@@ -117,7 +117,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform",
+    "outputFileTracingRoot": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React_app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -307,10 +307,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform"
+      "root": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React_app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform"
     }
   },
-  "appDir": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\frontend",
+  "appDir": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React_app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\frontend",
   "relativeAppDir": "frontend",
   "files": [
     ".next\\routes-manifest.json",

@@ -1,3 +1,130 @@
+# Fusion — Multi Enterprise IT Project Maintenance Platform
+
+Một bản tóm tắt kiến trúc của project cùng hướng dẫn chạy & deploy nhanh.
+
+## Nội dung chính
+- Modules chính: IAM (Auth), Tenant Management, Project Management, Feedback, Requirement, Task, Collaboration, Chat, File Storage, AI, Analytics, Notifications, Audit.
+
+
+---
+
+## Yêu cầu (Prerequisites)
+- .NET 8 SDK (đã dùng `net8.0`)
+- Node.js (v16+)
+- npm
+- SQLite (không bắt buộc — dùng file `fusion.db` local)
+- (Nếu dùng Firebase) Tài khoản Firebase project và service account JSON
+
+---
+
+## Cấu trúc dự án (tóm tắt)
+- `backend/` — chứa service `Fusion.API` (.NET, SQLite)
+- `frontend/` — Next.js + React app
+- `data/`, `docs/` — dữ liệu và tài liệu
+
+---
+
+## Cấu hình Firebase (nếu muốn dùng auth + Firestore)
+1. Tạo Firebase project tại https://console.firebase.google.com
+2. Bật Authentication → Sign-in method → `Email/Password` (hoặc provider bạn cần)
+3. Tạo service account (Project Settings → Service accounts → Generate new private key)
+4. Lưu file JSON service account trên máy dev, ví dụ `C:\keys\firebase-service-account.json`
+5. Thiết đặt biến môi trường (PowerShell):
+```powershell
+$env:GOOGLE_APPLICATION_CREDENTIALS='C:\keys\firebase-service-account.json'
+$env:FIREBASE_PROJECT_ID='your-firebase-project-id'
+```
+Hoặc thêm vào `appsettings.Development.json` trong `backend/src/Fusion.API`:
+```json
+{
+  "Firebase": {
+    "ServiceAccountPath": "C:\\keys\\firebase-service-account.json",
+    "ProjectId": "your-firebase-project-id"
+  }
+}
+```
+
+---
+
+## Chạy Backend (local)
+1. Mở PowerShell và chuyển đến thư mục backend:
+```powershell
+cd '.....\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\backend\src\Fusion.API'
+```
+2. Restore & build:
+```powershell
+dotnet restore
+dotnet build
+```
+3. Chạy app:
+```powershell
+dotnet run
+```
+Mặc định app sẽ lắng nghe cổng được dotnet gán (thường `http://localhost:5000`). Kiểm tra console để biết URL.
+
+### Notes:
+- Khi khởi chạy, app sẽ gọi `EnsureSeedData()` để tạo DB + seed admin mặc định nếu chưa có. Mật khẩu seed mặc định nằm trong `appsettings.Development.json` hoặc giá trị mặc định `ChangeMe123!`.
+
+---
+
+## Chạy Frontend (local)
+1. Mở terminal mới và vào thư mục frontend:
+```powershell
+cd '.....\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\frontend'
+```
+2. Cài dependencies và chạy dev server:
+```powershell
+npm install
+npm run dev
+```
+3. Mở trình duyệt `http://localhost:3000` (hoặc port Next.js hiển thị).
+
+### Thiết lập môi trường frontend
+Tạo file `.env.local` với các biến sau (lấy giá trị từ Firebase console nếu dùng Firebase):
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=yourApiKey
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=yourProject.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-firebase-project-id
+NEXT_PUBLIC_BACKEND_URL=http://localhost:5000
+```
+
+---
+
+## Luồng đăng nhập (summary)
+1. Frontend dùng Firebase Auth (email/password) để đăng nhập, lấy ID token.
+2. Frontend gửi `POST /api/Auth/login` kèm header `Authorization: Bearer <idToken>`.
+3. Backend verify token bằng Firebase Admin SDK, tạo hoặc tìm `Admin` tương ứng trong SQLite, và trả thông tin user.
+4. Frontend lưu token (ví dụ `localStorage`) và hiển thị thông tin user trên `UserNav`.
+
+---
+
+## Mục tiêu deploy nhanh bằng Docker (tham khảo)
+Tệp `docker-compose.yml` và `Dockerfile` có thể tồn tại trong repo; để deploy nhanh bạn có thể:
+1. Build backend image
+2. Build frontend image
+3. Chạy `docker-compose up --build`
+
+Lưu ý: cần mount secret/service account cho Firebase hoặc set biến môi trường trong compose.
+
+---
+
+## Migrations & Database
+- Dự án dùng Entity Framework Core migrations. Nếu cần tạo migration mới:
+```powershell
+cd backend/src/Fusion.API
+dotnet ef migrations add YourMigrationName
+dotnet ef database update
+```
+
+## Troubleshooting
+- Lỗi NuGet package: chạy `dotnet restore` và kiểm tra network/proxy.
+- Lỗi Firebase init: kiểm tra `GOOGLE_APPLICATION_CREDENTIALS` và `FIREBASE_PROJECT_ID`.
+- Nếu seed admin không xuất hiện: kiểm tra `fusion.db` trong thư mục backend hoặc kết nối DB trong `ConnectionStrings`.
+
+---
+
+
+
 ⚙️ 1. Identity & Access Management Service (IAM)
 
 Domain: Xác thực, phân quyền đa tenant.

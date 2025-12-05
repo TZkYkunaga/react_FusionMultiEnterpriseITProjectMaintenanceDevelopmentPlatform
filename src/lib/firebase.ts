@@ -1,5 +1,6 @@
 import { initializeApp, getApp, getApps } from "firebase/app";
 import { getAnalytics, isSupported, type Analytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
 
 // NOTE: In a real production app you should move these values into environment
 // variables (NEXT_PUBLIC_*) instead of hard-coding them.
@@ -35,5 +36,8 @@ if (typeof window !== "undefined") {
 }
 
 export const analytics = analyticsInstance;
+
+// Export `auth` for use in client-side authentication flows
+export const auth = typeof window !== "undefined" ? getAuth(firebaseApp) : null;
 
 

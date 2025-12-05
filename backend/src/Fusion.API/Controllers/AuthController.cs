@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Fusion.API.Data;
 using Fusion.API.Models;
 using System.Threading.Tasks;
+using System;
+using System.Linq;
+using FirebaseAdmin.Auth;
 
 namespace Fusion.API.Controllers
 {
@@ -19,40 +22,80 @@ namespace Fusion.API.Controllers
 
         public class LoginRequest
         {
-            public string Username { get; set; }
-            public string Password { get; set; }
+            public required string Username { get; set; }
+            public required string Password { get; set; }
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
+            // If an Authorization header with a Firebase ID token is supplied, validate it.
+            var authHeader = Request.Headers["Authorization"].FirstOrDefault();
+            if (!string.IsNullOrEmpty(authHeader) && authHeader.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase))
+            {
+                var idToken = authHeader.Substring("Bearer ".Length).Trim();
+                try
+                {
+                    var decoded = await FirebaseAuth.DefaultInstance.VerifyIdTokenAsync(idToken);
+                    var email = decoded.Claims.ContainsKey("email") ? decoded.Claims["email"]?.ToString() : decoded.Uid;
+                    if (string.IsNullOrEmpty(email))
+                    {
+                        return Unauthorized("Firebase token missing email");
+                    }
+
+                    var admin = await _context.Admins.FirstOrDefaultAsync(a => a.Email == email);
+                    if (admin == null)
+                    {
+                        admin = new Admin
+                        {
+                            Email = email,
+                            Name = email.Split('@').FirstOrDefault() ?? email,
+                            PasswordHash = string.Empty
+                        };
+                        _context.Admins.Add(admin);
+                        await _context.SaveChangesAsync();
+                    }
+
+                    return Ok(new { Message = "Login successful", Email = email, Uid = decoded.Uid });
+                }
+                catch (FirebaseAuthException fex)
+                {
+                    return Unauthorized($"Invalid Firebase ID token: {fex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest($"Token validation error: {ex.Message}");
+                }
+            }
+
+            // Fallback: legacy username/password login (kept for compatibility)
             if (loginRequest == null || string.IsNullOrEmpty(loginRequest.Username) || string.IsNullOrEmpty(loginRequest.Password))
             {
                 return BadRequest("Invalid client request");
             }
 
-            // IMPORTANT: This is a temporary, insecure login implementation for setup purposes.
-            // We will replace this with proper password hashing (e.g., BCrypt) and token generation (JWT).
-            var admin = await _context.Admins
-                .FirstOrDefaultAsync(a => a.Username == loginRequest.Username);
+            // Find the admin user by their email (username).
+            var legacyAdmin = await _context.Admins
+                .FirstOrDefaultAsync(a => a.Email == loginRequest.Username);
 
-            if (admin == null)
+            if (legacyAdmin == null)
             {
                 return Unauthorized("Invalid credentials");
             }
 
-            // This is a placeholder for password verification.
-            // For now we compare the supplied password with the stored PasswordHash field,
-            // which is seeded from configuration. In a real app, this must be a secure hash check.
-            bool isPasswordValid = (loginRequest.Password == admin.PasswordHash);
+            // WARNING: Insecure plain text password comparison for temporary development.
+            bool isPasswordValid = loginRequest.Password == legacyAdmin.PasswordHash;
 
             if (!isPasswordValid)
             {
                 return Unauthorized("Invalid credentials");
             }
 
-            // Placeholder for token generation
-            return Ok(new { Message = "Login successful" });
+            return Ok(new
+            {
+                message = "Login successful",
+                user = new { legacyAdmin.Email, legacyAdmin.Name }
+            });
         }
     }
 }

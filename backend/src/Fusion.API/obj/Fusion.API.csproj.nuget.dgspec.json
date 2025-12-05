@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\backend\\src\\Fusion.API\\Fusion.API.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React_app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\backend\\src\\Fusion.API\\Fusion.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\backend\\src\\Fusion.API\\Fusion.API.csproj": {
+    "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React_app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\backend\\src\\Fusion.API\\Fusion.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\backend\\src\\Fusion.API\\Fusion.API.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React_app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\backend\\src\\Fusion.API\\Fusion.API.csproj",
         "projectName": "Fusion.API",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\backend\\src\\Fusion.API\\Fusion.API.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React_app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\backend\\src\\Fusion.API\\Fusion.API.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\backend\\src\\Fusion.API\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\DownloadUltraPlus\\React_app\\react_FusionMultiEnterpriseITProjectMaintenanceDevelopmentPlatform\\backend\\src\\Fusion.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,6 +44,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "Google.Cloud.Firestore": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

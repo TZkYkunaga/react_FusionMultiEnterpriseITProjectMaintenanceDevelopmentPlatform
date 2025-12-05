@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { auth } from "@/lib/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
@@ -16,15 +18,39 @@ export default function LoginPage() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+    if (!auth) {
+      setError("Authentication not available");
+      return;
+    }
 
-    // In a real app, you would make an API call to your backend
-    // For now, we'll simulate a login
-    if (username === "admin" && password === "password") {
-      // In a real app, you'd store a token and redirect
-      console.log("Login successful");
+    try {
+      // Sign in using Firebase Authentication
+      const userCredential = await signInWithEmailAndPassword(auth, username, password);
+      const user = userCredential.user;
+
+      // Obtain Firebase ID token and send to backend for verification
+      const idToken = await user.getIdToken();
+
+      const res = await fetch("/api/Auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${idToken}`,
+        },
+        body: JSON.stringify({ username }),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        setError(text || "Login failed");
+        return;
+      }
+
+      // On success, redirect to admin area
       router.push("/admin/tenants");
-    } else {
-      setError("Invalid username or password");
+    } catch (err: any) {
+      console.error(err);
+      setError(err?.message || "Login error");
     }
   };
 

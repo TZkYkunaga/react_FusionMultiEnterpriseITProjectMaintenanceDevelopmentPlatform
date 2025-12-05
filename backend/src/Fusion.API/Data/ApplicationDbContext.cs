@@ -27,7 +27,7 @@ namespace Fusion.API.Data
             // Configure the Admin entity
             modelBuilder.Entity<Admin>(entity =>
             {
-                entity.HasIndex(e => e.Username).IsUnique();
+                entity.HasIndex(e => e.Email).IsUnique();
             });
         }
     }
